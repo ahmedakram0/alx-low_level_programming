@@ -1,6 +1,8 @@
 #include <stdio.h>
 /**
-* main
+* main - entry
+* Description: 'test'
+* return: Always 0 (success)
 */
 int main(void)
 {

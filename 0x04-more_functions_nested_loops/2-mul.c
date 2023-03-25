@@ -12,6 +12,5 @@ int mul;
 mul = a * b;
 
 return(mul);
-
 }
 

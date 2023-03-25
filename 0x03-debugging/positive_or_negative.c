@@ -3,29 +3,25 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
- *
- * Return: Always 0 (success)
+ *  positive_or_negative - print a number
+ *  @i : integer
+ *  if the number is greater than 0: is positive, if the number is 0: is zero
+ *  if the number is less then 0: is negtative, followed by a new line
+ *  Return: 0
  */
-int main(void)
+void positive_or_negative(int i)
 {
-	int n;
 
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
-	printf("%d is ", n);
 	if (n > 0)
-	{
-		printf("positive\n");
-	}
+	
+		printf("%d is positive\n",i);
+
 	else if (n < 0)
-	{
-		printf("negative\n");
-	}
+	
+		printf("%d is negative\n",i);
+	
 	else
-	{
-		printf("zero\n");
-	}
-	return (0);
+	
+		printf("zero\n",i);
 }
 

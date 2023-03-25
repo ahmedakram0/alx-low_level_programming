@@ -13,6 +13,6 @@ int mul;
 
 mul = a * b;
 
-return(mul);
+return (mul);
 }
 

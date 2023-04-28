@@ -1,31 +1,30 @@
-#include <stdlib.h>
-#include <string.h>
 #include "lists.h"
 
 /**
- * add_node - adds a new node at the beginning of a linked list
- * @head: double pointer to the list_t list
- * @str: new string to add in the node
+ * list_len - gets the number of nodes
  *
- * Return: the address of the new element, or NULL if it fails
- */
-list_t *add_node(list_t **head, const char *str)
+ * @h: pointer to the head (first node)
+ *
+ * Return: number of nodes
+*/
+
+size_t list_len(const list_t *h)
 {
-	list_t *new;
-	unsigned int len = 0;
+	size_t node_count = 1;
 
-	while (str[len])
-		len++;
+	/*if head is null return 0 nodes*/
+	if (h == NULL)
+		return (0);
 
-	new = malloc(sizeof(list_t));
-	if (!new)
-		return (NULL);
+	/*iterate through the nodes*/
+	while (h->next != NULL)
+	{
+		/*go to the next node*/
+		h = h->next;
+		/*count node*/
+		node_count++;
+	}
 
-	new->str = strdup(str);
-	new->len = len;
-	new->next = (*head);
-	(*head) = new;
-
-	return (*head);
+	return (node_count);
 }
 
